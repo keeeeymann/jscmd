@@ -1,0 +1,59 @@
+html {
+	height: 100%
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	height: 95%;
+}
+
+#pageTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#subTitle {
+	text-align: center;
+	font-size: 90%;
+}
+
+#errorMsg {
+	font-size: 90%;
+	text-align: left;
+	font-weight: bold;
+	color: darkred;
+	padding: 10px;
+}
+
+.title {
+	background-color: dodgerblue;
+	color: black;
+}
+
+.outputStream {
+	background-color: black;
+	color: white;
+	font-family: monospace;
+	font-weight: bold;
+	height: 95%;
+	width: 80%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.controlPanel {
+	background-color: gray;
+	height: 95%;
+	width: 20%;
+	float: right;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
+.controlPanel input {
+	width: 80%;
+}

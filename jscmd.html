@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title id="htmlTitle">JavaScript Commandline</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="interface.js"></script>
+    <script> window.onload = init; </script>
+  </head>
+  
+  <body>
+    <div class="title">
+      <h1 id="pageTitle">JavaScript Commandline 0.01</h1></div>
+    <div class="outputStream">
+      <pre id="textOut">Click "Run Script" to run your script...
+        <br />
+        <br /></pre></div>
+    <div class="controlPanel">
+      <div>
+        <input type="text" id="scriptFile" value="src/main.js" type="url" />
+        <button id="buttonRun" onclick="RunScript()">Run Script</button></div>
+      <div>
+        <button id="buttonClear" onclick="ClearScreen()">Clear Screen</button>
+        <button id="buttonReset" onclick="location.reload(true)">Reset Script</button></div>
+      <div>
+        <p id="subTitle">LocalStorage Status</p>
+        <p id="errorMsg">Error Message</p></div>
+    </div>
+  </body>
+
+</html>
