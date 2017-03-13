@@ -13,16 +13,7 @@ function RunScript() {
 }
 
 function printf(str) {
-    var array_str = String(str).split("");
-    var result_str = new String;
-    for(var i = 0, len = array_str.length; i < len; i++) {
-        switch(array_str[i]) {
-            case '<': result_str += "&lt;"; break;
-            case '>': result_str += "&gt;"; break;
-            default: result_str += array_str[i];
-        }
-    }
-    
+    result_str = String(str).replace("<","&lt;").replace(">", "&gt;");
     var tout = document.getElementById("textOut");
     tout.innerHTML += result_str;
     if (isLocalStorage) window.sessionStorage.textout = tout.innerHTML;
