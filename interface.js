@@ -12,9 +12,19 @@ function RunScript() {
     document.getElementById("scriptFile").disabled = "disabled";
 }
 
-function printf(string) {
+function printf(str) {
+    var array_str = String(str).split("");
+    var result_str = new String;
+    for(var i = 0, len = array_str.length; i < len; i++) {
+        switch(array_str[i]) {
+            case '<': result_str += "&lt;"; break;
+            case '>': result_str += "&gt;"; break;
+            default: result_str += array_str[i];
+        }
+    }
+    
     var tout = document.getElementById("textOut");
-    tout.innerHTML += string;
+    tout.innerHTML += result_str;
     if (isLocalStorage) window.sessionStorage.textout = tout.innerHTML;
 }
 
@@ -41,7 +51,7 @@ function init() {
 
     if (!storage) {
         isLocalStorage = false;
-        document.getElementById("errorMsg").innerHTML = "HTML5 LocalStorage is not supported, or is disabled by IE or Edge in local files. Functionality is limited.";
+        document.getElementById("errorMsg").innerHTML = "HTML5 LocalStorage is not supported, or is disabled by Internet Explorer or Microsoft Edge in local files. Functionality is limited.";
         document.getElementById("subTitle").innerHTML = "LocalStorage: Disabled";
     }
     else {
